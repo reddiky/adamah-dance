@@ -1,5 +1,4 @@
 [build]
   base = "client/"
-  build = "build"
   publish = "build/"
-  command = "echo 'yarn build'"
+  command = "echo 'yarn netlify'"
