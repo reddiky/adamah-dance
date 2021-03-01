@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLazyQuery, gql, useApolloClient } from '@apollo/client';
+import { gql, useApolloClient } from '@apollo/client';
 import Results from '../../components/Results'
 import Search from '../../components/Search'
 

@@ -7,7 +7,7 @@ export default function Results(props) {
     return earthquakes.slice(0,100).map((earthQuake, i) => 
       {
         return (
-        <tr className={i % 2 == 0 ? "bg-white" : "bg-gray-50"} key={i}>
+        <tr className={i % 2 === 0 ? "bg-white" : "bg-gray-50"} key={i}>
           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
             { earthQuake.title}
           </td>
