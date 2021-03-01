@@ -1,6 +1,6 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express'
-import { typeDefs, resolvers } from './utils/apollo'
+import { typeDefs, resolvers } from './utils/apollo/index.js'
 const PORT = 1234;
 const app = express();
 
@@ -13,6 +13,7 @@ app.all('/*', function(req, res, next) {
 
 // Initialize Apollo Server
 const server = new ApolloServer({ typeDefs, resolvers })
+
 server.applyMiddleware({ app })
 
 app.listen(PORT, () => {

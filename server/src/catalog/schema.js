@@ -1,24 +1,26 @@
 import { gql } from 'apollo-server'
 
 export default gql`
+  
+  type EarthQuakeDemographics {
+    earthquakes: [EarthQuake]
+    max: Float,
+    min: Float,
+    median: Float
+  }
+  
   type EarthQuake {
     mag: String
     title: String
     time: String
     url: String
-    coordinates: Coordinates
-  }
-
-  type Coordinates {
-    x: String
-    y: String
-    z: String
+    coordinates: [Float]
   }
 
   type Query {
     earthQuakes(
-      format: String!, starttime: String, endtime: String, minmagnitude: String, 
-      location: String, latitude: Int, longitude: Int, maxradiuskm: Int): 
-        [EarthQuake]
+      format: String!, starttime: Date!, endtime: Date!, minmagnitude: Float!, 
+      location: String, latitude: Float!, longitude: Float!, maxradiuskm: Float!): 
+        EarthQuakeDemographics
   }
 `

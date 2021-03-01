@@ -1,8 +1,15 @@
-import * as catalogResolvers from '../../catalog/resolvers'
-import catalogSchema from '../../catalog/schema'
+import { gql } from 'apollo-server-express'
+import earthQuakes from '../../catalog/resolvers.js'
+import catalogSchema from '../../catalog/schema.js'
 
 export const resolvers = {
-  ...catalogResolvers
-} 
+  Query: {
+    earthQuakes
+  }
+}
 
-export const typeDefs = [catalogSchema]
+const dateSchema = gql`
+  scalar Date
+`
+
+export const typeDefs = [dateSchema, catalogSchema]
