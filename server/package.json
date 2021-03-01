@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage --watchAll=false",
     "start": "node --harmony ./src/index.js"
   },
   "keywords": [],
@@ -20,5 +20,26 @@
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "graphql-tools": "^7.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.13.8",
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "rootDir": "./",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "testMatch": [
+      "<rootDir>/(tests/**/*.test.(js)|**/__tests__/*.(js))"
+    ],
+    "coverageDirectory": "<rootDir>/tests/coverage"
   }
 }
