@@ -12,11 +12,13 @@ export default function App() {
     <Router>
       <div className="App w-max mx-auto">
         <header className="App-header">
-        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-            <div className="sm:col-span-3">
-              Adamah Dance
+        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6 items-center">
+            <div className="sm:col-span-3 text-left">
+              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                <span className="block text-indigo-600 xl:inline">Adamah Dance</span>
+              </h1>
             </div>
-            <div className="sm:col-span-3">
+            <div className="sm:col-span-3 flex justify-center sm:justify-end">
               <img src='https://cdn.pixabay.com/photo/2017/10/08/20/30/planet-2831514__340.png' className="App-logo" alt="logo" />
             </div>
           </div>
